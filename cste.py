@@ -3,11 +3,11 @@
 #  @package cste
 #  @brief Generals constants for python application
 #  @author Jeremy HERGAULT (reneca)
-#          Jean-Philippe HAYES
+#          Thomas CHEMEL
 #  @version 1.0
 #  @date 2015-07-15
 #
-#  This file is part of Polycarnet, which is a carnet de suivi genrator
+#  This file is part of Polycarnet, which is a carnet de suivi generator
 #  Copyright (C) 2015  HERGAULT Jeremy, Alexandre, Thierry ( reneca )
 #
 #  Polycarnet is free software: you can redistribute it and/or modify
@@ -124,18 +124,19 @@ assocValue = {
 "Soutenance PFE" : { "name" : "Soutenance PFE", "notions" : "Soutenance à l'oral", "niveau" : "Bon", "comm" : "Bonne présentation" },
 
 # Domotique
-"Domotique_CM" : { "name" : "Domotique", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Domotique_TD" : { "name" : "Domotique", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Domotique_TP" : { "name" : "Domotique", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Domotique_CT" : { "name" : "Domotique CT", "notions" : "", "niveau" : "Bon", "comm" : "" },
+"Domotique_CM" : { "name" : "Domotique", "notions" : "Historique du déploiement de la domotique. Réseaux de capteurs, technologie CPL, réseau X10, Protocole Zigbee, Bluetooth, Wifi, topologie de réseau", "niveau" : "Bon", "comm" : "Cours un peu dépassé et peu en rapport avec la domotique moderne" },
+"Domotique_TD" : { "name" : "Domotique", "notions" : "Historique du déploiement de la domotique. Réseaux de capteurs, technologie CPL, réseau X10, Protocole Zigbee, Bluetooth, Wifi, topologie de réseau", "niveau" : "Bon", "comm" : "Cours un peu dépassé et peu en rapport avec la domotique moderne" },
+"Domotique_TP" : { "name" : "TP Domotique", "notions" : "Protocole Enocean et paramétrage de module Enocean, utilisation de l'IDE OpenPicus", "niveau" : "Bon", "comm" : "TP intéressant" },
+"Domotique_CT" : { "name" : "Domotique CT", "notions" : "Controle terminal", "niveau" : "Bon", "comm" : "Controle terminal" },
 
-"Gest Energie_CM" : { "name" : "Gestion de l'énergie", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Gest Energie_TP" : { "name" : "Gestion de l'énergie", "notions" : "", "niveau" : "Bon", "comm" : "" },
+"Gest Energie_CM" : { "name" : "Gestion de l'énergie", "notions" : "Interrupteur commandable, Eolienne et Panneau Photovoltaïque", "niveau" : "Bon", "comm" : "Cours très intéressant" },
+"Gest Energie_TP" : { "name" : "TP Gestion de l'énergie", "notions" : "TP sur panneau Photovoltïque", "niveau" : "Bon", "comm" : "TP interressant" },
+"Gest Energie_CT" : { "name" : "Gestion de l'énergie CT", "notions" : "Controle Terminal", "niveau" : "Bon", "comm" : "Contrôle terminal réussi" },
 
-"Auto Hab1_CM" : { "name" : "Automatisation de l'habitation", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Auto Hab2_CM" : { "name" : "Automatisation de l'habitation 2", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Auto Hab2_TP" : { "name" : "Automatisation de l'habitation", "notions" : "", "niveau" : "Bon", "comm" : "" },
-"Auto Hab_CT" : { "name" : "Automatisation de l'habitation CT", "notions" : "", "niveau" : "Bon", "comm" : "" },
+"Auto Hab1_CM" : { "name" : "Automatisation de l'habitation", "notions" : "Petit présentation sur la domotique + exemple concret", "niveau" : "Bon", "comm" : "Exemple très intéressant" },
+"Auto Hab2_CM" : { "name" : "Automatisation de l'habitation 2", "notions" : "Cours sur le bus KNX", "niveau" : "Bon", "comm" : "Très bon module, concret, ludique, très bien animé." },
+"Auto Hab2_TP" : { "name" : "TP Automatisation de l'habitation", "notions" : "TP sur la programmation des appareils KNX", "niveau" : "Bon", "comm" : "Très bon module, concret, ludique, très bien animé" },
+"Auto Hab_CT" : { "name" : "Automatisation de l'habitation CT", "notions" : "Controle Terminal", "niveau" : "Bon", "comm" : "Controle terminal réussi" },
 
 # Automobile
 "Véhicule_int_CM" : { "name" : "Véhicule intelligent", "notions" : "Cours sur les véhicules automatisés", "niveau" : "Très bon", "comm" : "Cours très intéressent, très formateur" },

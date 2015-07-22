@@ -33,6 +33,11 @@ reqJsonDII5.send(null);
 var title;
 var textTitle;
 var tab;
+var tHead;
+var tBody;
+var row;
+var cell;
+var cellText;
 
 
 /*
@@ -54,23 +59,62 @@ function printWeek(dataJson, week, groupe, tabBalise) {
 	title.appendChild(textTitle);
 	tabBalise.appendChild(title);
 
-	tab = document.createElement('p');
+	tab = document.createElement("table");
+	tab.setAttribute('border', '1');
 
-	// Ajout tableau
-	var textElement = document.createTextNode("INTITULE COURS" + ";" + "NOTIONS ETUDIEES" + ";" + "NIVEAU" + ";" + "COMMENTAIRE");
-	tab.appendChild(textElement);
-	tab.innerHTML += "<br />";
+	// Ajout titles
+	tHead = document.createElement("thead");
+	row = document.createElement("tr");
 
+	cellText = document.createTextNode("INTITULE COURS");
+	cell = document.createElement("th");
+	cell.setAttribute('rowSpan', '2'); 
+	cell.appendChild(cellText);
+    row.appendChild(cell);
+	cellText = document.createTextNode("NOTIONS ETUDIEES");
+	cell = document.createElement("th");
+	cell.setAttribute('rowSpan', '2');
+	cell.appendChild(cellText);
+    row.appendChild(cell);
+	cellText = document.createTextNode("NIVEAU");
+	cell = document.createElement("th");
+	cell.setAttribute('rowSpan', '2');
+	cell.appendChild(cellText);
+    row.appendChild(cell);
+	cellText = document.createTextNode("COMMENTAIRE");
+	cell = document.createElement("th");
+	cell.setAttribute('rowSpan', '2');
+	cell.appendChild(cellText);
+    row.appendChild(cell);
+
+	tHead.appendChild(row);
+	tab.appendChild(tHead);
+
+	tBody = document.createElement("tbody");
 	for(mats in dataJson[week][groupe]) {
-		textElement = document.createTextNode(dataJson[week][groupe][mats]["name"]
-					+ ";" + dataJson[week][groupe][mats]["notions"]
-					+ ";" + dataJson[week][groupe][mats]["niveau"]
-					+ ";" + dataJson[week][groupe][mats]["comm"]);
+		row = document.createElement("tr");
 
-		tab.appendChild(textElement);
-		tab.innerHTML += "<br />";						
+		cellText = document.createTextNode(dataJson[week][groupe][mats]["name"]);
+		cell = document.createElement("td");
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+		cellText = document.createTextNode(dataJson[week][groupe][mats]["notions"]);
+		cell = document.createElement("td");
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+		cellText = document.createTextNode(dataJson[week][groupe][mats]["niveau"]);
+		cell = document.createElement("td");
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+		cellText = document.createTextNode(dataJson[week][groupe][mats]["comm"]);
+		cell = document.createElement("td");
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+
+		tBody.appendChild(row);				
 	}
 
+	tab.appendChild(tBody);
 	tabBalise.appendChild(tab);
 }
 

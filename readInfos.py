@@ -166,13 +166,20 @@ def getCalendar(numCalendar, GrpCalendar, outputJson) :
 
 			if mat not in skipValue and mat not in outputJson[Sem][GrpCalendar] and len(mat) > 3:
 				if mat in assocValue:
-					if len(assocValue[mat]["name"]) > 1 and assocValue[mat]["name"] not in outputJson[Sem][GrpCalendar]:
-						wValue = {}
-						wValue["name"] = assocValue[mat]["name"]
-						wValue["notions"] = assocValue[mat]["notions"]
-						wValue["niveau"] = assocValue[mat]["niveau"]
-						wValue["comm"] = assocValue[mat]["comm"]
-						outputJson[Sem][GrpCalendar].append(wValue)
+					if len(assocValue[mat]["name"]) > 1:
+						isPresent = 0
+						for outMat in outputJson[Sem][GrpCalendar]:
+							if assocValue[mat]["name"] == outMat["name"]:
+								isPresent = 1
+								break
+
+						if isPresent == 0:
+							wValue = {}
+							wValue["name"] = assocValue[mat]["name"]
+							wValue["notions"] = assocValue[mat]["notions"]
+							wValue["niveau"] = assocValue[mat]["niveau"]
+							wValue["comm"] = assocValue[mat]["comm"]
+							outputJson[Sem][GrpCalendar].append(wValue)
 				elif mat.find('/') == -1 and len(mat) > 5:
 					print(mat)
 					outputJson[Sem][GrpCalendar].append(mat)
