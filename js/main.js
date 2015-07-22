@@ -68,22 +68,18 @@ function printWeek(dataJson, week, groupe, tabBalise) {
 
 	cellText = document.createTextNode("INTITULE COURS");
 	cell = document.createElement("th");
-	cell.setAttribute('rowSpan', '2'); 
 	cell.appendChild(cellText);
     row.appendChild(cell);
 	cellText = document.createTextNode("NOTIONS ETUDIEES");
 	cell = document.createElement("th");
-	cell.setAttribute('rowSpan', '2');
 	cell.appendChild(cellText);
     row.appendChild(cell);
 	cellText = document.createTextNode("NIVEAU");
 	cell = document.createElement("th");
-	cell.setAttribute('rowSpan', '2');
 	cell.appendChild(cellText);
     row.appendChild(cell);
 	cellText = document.createTextNode("COMMENTAIRE");
 	cell = document.createElement("th");
-	cell.setAttribute('rowSpan', '2');
 	cell.appendChild(cellText);
     row.appendChild(cell);
 
