@@ -18,7 +18,7 @@ Dans ce fichier est présent la déclaration d'un élément json `assocValue`. C
 
 1. Les notions étudié pendant le cours *notions*
 2. Le niveau que vous avez *niveau*
-3. Le commentaire que vous souhaiter ajouter *comm*
+3. Le commentaire que vous souhaitez ajouter *comm*
 
 
 ## Génération du carnet de suivi
@@ -30,11 +30,11 @@ Le fichier sera généré dans le dossier data.
 
 ## Importation dans Word
 
-Pour importer vos semaines dans word, il faut ouvrir le fichier `index.html` avec votre navigateur internet.
+Pour importer vos semaines dans Word, il faut ouvrir le fichier `index.html` avec votre navigateur internet.
 
 Vous aurez ainsi la liste des semaines pour chaque groupe (sauf si vous avez configuré vos groupes), et vos tableaux pour chaque semaine du carnet de suivi.
 
-Il vous suffi de copier/coller votre tableau dans word, et de modifier l'apparence si vous le désiré.
+Il vous suffit de copier/coller votre tableau dans Word, et de modifier l'apparence dans les options si vous le désirez.
 
 Votre tableau de la semaine sera ainsi importé dans Word.
 Il faut réitérer cette manipulation pour chaque semaine.
