@@ -157,6 +157,7 @@ def getCalendar(numCalendar, GrpCalendar, outputJson) :
 		tempData = json.loads(data)
 
 		jsonData = tempData[len(tempData) - 3]
+		isEmpty = 1
 		for mat in jsonData:
 			if Sem not in outputJson:
 				outputJson[Sem] = {}
@@ -180,9 +181,13 @@ def getCalendar(numCalendar, GrpCalendar, outputJson) :
 							wValue["niveau"] = assocValue[mat]["niveau"]
 							wValue["comm"] = assocValue[mat]["comm"]
 							outputJson[Sem][GrpCalendar].append(wValue)
+							isEmpty = 0
 				elif mat.find('/') == -1 and len(mat) > 5:
 					print(mat)
 					outputJson[Sem][GrpCalendar].append(mat)
+		# Remove if it's an empty week
+		if isEmpty == 1 and len(outputJson[Sem]) == 1:
+			del outputJson[Sem]
 # End getCalendar()
 
 
